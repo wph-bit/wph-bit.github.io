@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ==================== 基本信息（可修改） ==================== -->
+  <meta name="description" content="Academic homepage of Wang Penghan, Ph.D. student in Control Science and Engineering at Harbin Institute of Technology, Shenzhen.">
+  <meta name="author" content="Wang Penghan">
+  <meta name="theme-color" content="#1a365d">
+  <title>Wang Penghan | Academic Homepage</title>
+
+  <!-- 样式与脚本都使用相对路径，因此可直接部署到 GitHub Pages 仓库根目录 -->
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <!-- 键盘用户可跳过导航，直接进入主要内容 -->
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- ==================== 顶部导航栏 ==================== -->
+  <!-- 导航栏固定在页面顶部；手机端由 script.js 控制折叠菜单 -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#about" aria-label="Wang Penghan — Home">
+        <span class="brand-mark" aria-hidden="true">WP</span>
+        <span class="brand-text">Wang Penghan</span>
+      </a>
+
+      <!-- 手机端菜单按钮；aria-expanded 会在菜单开合时动态更新 -->
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        type="button"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        aria-label="Open navigation"
+      >
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+        <span class="nav-toggle-line"></span>
+      </button>
+
+      <nav class="site-nav" id="primary-navigation" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="nav-link is-active" href="#about" aria-current="location">About</a></li>
+          <li><a class="nav-link" href="#education">Education</a></li>
+          <li><a class="nav-link" href="#projects">Projects</a></li>
+          <li><a class="nav-link" href="#skills">Skills</a></li>
+          <li><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <!-- ==================== About Me ==================== -->
+    <!-- 左侧个人照片 + 右侧个人简介。 -->
+    <section class="section about-section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="about-grid">
+          <div class="portrait-column">
+            <!-- 个人照片：更换照片时，只需替换 src 指向的文件 -->
+            <img
+              class="portrait-image"
+              src="self_introduction_photo.jpeg"
+              alt="Portrait of Wang Penghan"
+              width="150"
+              height="150"
+            />
+
+            <div class="status-badge">
+              <span class="status-dot" aria-hidden="true"></span>
+              Incoming Ph.D. Student
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <p class="eyebrow">Ph.D. Student in Control Science and Engineering</p>
+
+            <h1 id="about-title">
+              Wang Penghan
+              <span class="name-zh" lang="zh-CN">王鹏翰</span>
+            </h1>
+
+            <p class="affiliation">
+              Harbin Institute of Technology, Shenzhen
+              <span aria-hidden="true">·</span>
+              <span lang="zh-CN">哈尔滨工业大学（深圳）</span>
+            </p>
+
+            <!-- 研究兴趣：当前仅保留 Control Theory -->
+            <div class="research-interests" aria-label="Research interests">
+              <span class="interest-label">Research Interests</span>
+              <ul class="interest-list">
+                <li>Control Theory</li>
+              </ul>
+            </div>
+
+            <!-- 英文个人简介 -->
+            <p class="bio">
+              I am an incoming Ph.D. student at HIT Shenzhen, supervised by Prof. Aiguo Wu.
+              I received my B.Eng. from South China University of Technology (SCUT). I am
+              currently exploring the field of control theory and eager to learn more through
+              future research.
+            </p>
+
+            <div class="about-actions">
+              <!-- CV 链接暂设为 #；部署前请替换成真实的 PDF 文件路径，例如 assets/cv.pdf -->
+              <a class="button button-primary" href="#" aria-label="Download CV">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v12m0 0 4.5-4.5M12 15l-4.5-4.5M5 20h14" />
+                </svg>
+                Download CV
+              </a>
+
+              <!-- GitHub 链接：请把“你的用户名”替换成真实用户名 -->
+              <a
+                class="button button-secondary"
+                href="https://github.com/你的用户名"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2.75a9.25 9.25 0 0 0-2.92 18.03c.46.09.63-.2.63-.44v-1.7c-2.56.56-3.1-1.09-3.1-1.09-.42-1.07-1.03-1.35-1.03-1.35-.84-.58.06-.57.06-.57.93.07 1.42.96 1.42.96.83 1.42 2.17 1.01 2.7.77.08-.6.32-1.01.59-1.24-2.04-.23-4.19-1.02-4.19-4.54 0-1 .36-1.82.95-2.46-.1-.23-.41-1.17.09-2.43 0 0 .78-.25 2.55.95a8.84 8.84 0 0 1 4.64 0c1.77-1.2 2.55-.95 2.55-.95.5 1.26.19 2.2.09 2.43.59.64.95 1.46.95 2.46 0 3.53-2.15 4.3-4.2 4.53.33.29.62.85.62 1.72v2.55c0 .24.17.54.64.44A9.25 9.25 0 0 0 12 2.75Z" />
+                </svg>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Education ==================== -->
+    <!-- 时间轴使用语义化 ol 列表，屏幕阅读器可以读出学习经历的先后顺序 -->
+    <section class="section section-muted" id="education" aria-labelledby="education-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Academic Journey</p>
+            <h2 class="section-title" id="education-title">Education</h2>
+          </div>
+          <p class="section-description">
+            A foundation in automatic control and intelligent systems, followed by doctoral
+            research in control science and engineering.
+          </p>
+        </div>
+
+        <ol class="timeline">
+          <!-- 博士经历 -->
+          <li class="timeline-item">
+            <div class="timeline-period">
+              <span class="period">2027 — Present</span>
+              <span class="period-label">Ph.D.</span>
+            </div>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-body">
+              <p class="timeline-overline">Doctoral Study</p>
+              <h3>Ph.D. in Control Science and Engineering</h3>
+              <p class="timeline-institution">Harbin Institute of Technology, Shenzhen</p>
+              <p class="timeline-detail">Direct-entry Ph.D. program · Supervisor: Prof. Aiguo Wu</p>
+            </div>
+          </li>
+
+          <!-- 本科经历 -->
+          <li class="timeline-item">
+            <div class="timeline-period">
+              <span class="period">2023 — 2027</span>
+              <span class="period-label">B.Eng.</span>
+            </div>
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-body">
+              <p class="timeline-overline">Undergraduate Study</p>
+              <h3>B.Eng. in Automation <span class="degree-note">(Innovation Class)</span></h3>
+              <p class="timeline-institution">South China University of Technology</p>
+              <p class="timeline-detail">Automation · Innovation Class</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ==================== Projects ==================== -->
+    <!-- 项目卡片布局；在平板和手机上会自动切换为单列 -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Selected Work</p>
+            <h2 class="section-title" id="projects-title">Projects</h2>
+          </div>
+          <p class="section-description">
+            Research-driven engineering projects spanning computer vision and calibration.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <!-- 项目 1：双目视觉识别与测距 -->
+          <article class="project-card" aria-labelledby="project-1-title">
+            <div class="project-card-header">
+              <div class="project-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M2.5 12s3.5-6.25 9.5-6.25S21.5 12 21.5 12s-3.5 6.25-9.5 6.25S2.5 12 2.5 12Z" />
+                  <circle cx="12" cy="12" r="2.75" />
+                </svg>
+              </div>
+              <span class="project-number" aria-hidden="true">01</span>
+            </div>
+
+            <h3 id="project-1-title">
+              Binocular Vision-based Window Recognition and Ranging System
+            </h3>
+            <p class="project-description">
+              Developed a system for highway toll stations using YOLOv8 and stereo vision.
+              Achieved 0.138px reprojection error and 1mm hand-eye calibration accuracy.
+            </p>
+
+            <ul class="project-tags" aria-label="Technologies used in project 1">
+              <li>YOLOv8</li>
+              <li>Stereo Vision</li>
+              <li>Camera Calibration</li>
+            </ul>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Skills ==================== -->
+    <!-- 技能以标签形式展示；hover 与键盘 focus 都会有一致的反馈 -->
+    <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">Technical Toolkit</p>
+            <h2 class="section-title" id="skills-title">Skills</h2>
+          </div>
+          <p class="section-description">
+            Languages, frameworks, and tools I use for research, simulation, and robotic system
+            development.
+          </p>
+        </div>
+
+        <div class="skills-panel">
+          <p class="skills-label">Core Technologies</p>
+          <ul class="skill-list" aria-label="Technical skills">
+            <li class="skill-tag">C++</li>
+            <li class="skill-tag">Python</li>
+            <li class="skill-tag">MATLAB/Simulink</li>
+            <li class="skill-tag">ROS/ROS2</li>
+            <li class="skill-tag">MoveIt</li>
+            <li class="skill-tag">Gazebo</li>
+            <li class="skill-tag">OpenCV</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== Contact ==================== -->
+    <!-- 这个区块对应导航栏中的 Contact；邮箱目前是占位地址，请替换为真实邮箱 -->
+    <section class="section contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container contact-shell">
+        <div class="contact-copy">
+          <p class="contact-kicker">Contact</p>
+          <h2 class="contact-title" id="contact-title">Let&rsquo;s connect.</h2>
+          <p class="contact-text">
+            I am always happy to discuss research, robotics, or potential collaborations.
+            Feel free to reach out by email.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <!-- 请将两处 your.email@example.com 都替换成真实邮箱 -->
+          <a class="button button-light" href="mailto:wwwph2005@163.com">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3.5 5.5h17v13h-17v-13Z" />
+              <path d="m4.25 6.25 7.75 6 7.75-6" />
+            </svg>
+            Email me
+          </a>
+          <span class="contact-note">wwwph2005@163.com</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== Footer ==================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 Wang Penghan. Powered by GitHub Pages.</p>
+      <a class="footer-email" href="mailto:your.email@example.com">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3.5 5.5h17v13h-17v-13Z" />
+          <path d="m4.25 6.25 7.75 6 7.75-6" />
+        </svg>
+        wwwph2005@163.com
+      </a>
+    </div>
+  </footer>
+
+  <!-- 返回顶部按钮由 script.js 根据滚动位置控制显示 -->
+  <button class="back-to-top" id="back-to-top" type="button" aria-label="Back to top" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M12 19V5m0 0-5.5 5.5M12 5l5.5 5.5" />
+    </svg>
+  </button>
+</body>
+</html>
